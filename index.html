@@ -1,12 +1,16 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Mailto Generator</title>
+  <meta charset="utf-8">
+	<title>TellMyReps</title>
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript">
 
+  <script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript">
 		var subject = 'Important Action';
-		var from = 'Brian Outlaw';
+		var from = 'A Concerned Citizen';
 		var recipients = [
 			['Karl Keefer', 'karl@karlkeefer.com'],
 			['Some Senator', 'fake@emailaddress.com'],
@@ -20,28 +24,13 @@ I'm writing to you to share my thoughts on this important issue.
 Thanks for your consideration,
 - {{from}}`
 
-		window.addEventListener('DOMContentLoaded', function(){
-			var results = document.getElementById('results');
-
-			for (var i=0; i<recipients.length;i++) {
-				var a = document.createElement('a');
-				a.href = 'mailto:'+recipients[i][1]+'?subject='+subject+'&body='+formatBody(recipients[i][0])
-				a.appendChild(document.createTextNode('Email '+recipients[i][0]));
-				a.target = '_blank';
-				a.style.display = 'block';
-				results.appendChild(a);
-			}
-		});
-
-		function formatBody(recipient) {
-			return encodeURIComponent(template.replace('{{name}}', recipient).replace('{{from}}', from));
-		}
+		window.addEventListener('DOMContentLoaded', render);
 	</script>
 </head>
 <body>
 	<h1>TellMyReps</h1>
 	<p>Make it easy contact your reps.</p>
-	<div id="results">
+	<div id="output">
 	</div>
 </body>
 </html>
