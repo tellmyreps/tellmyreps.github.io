@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>TellMyReps - SJR10</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript">
+
+		var smithWarner = 
+`{{name}}, 
+I am writing today to urge you to schedule SJR 10 as quickly as possible in the hopes that this important legislation can be passed this session. It is essential for SJR 10 to move quickly, as it still has a number of steps to get through the Legislative process before sine die.
+Additionally, I hope that you will consider signing onto SJR 10 as a co-sponsor, in order to amplify the message that Oregon is committed to being actively anti-racist. We believe it is imperative that Oregon take proactive steps to ensure that slavery is truly a thing of the past. 
+Thank you,
+-{{from}}`;
+
+    var fahey = 
+`{{name}}, 
+I am writing today to ask that you join me in urging Chair Smith Warner to schedule SJR 10 as quickly as possible in the hopes that this important legislation can be passed this session. It is essential for SJR 10 to move quickly, as it still has a number of steps to get through the Legislative process before sine die.
+Thank you,
+-{{from}}`;
+
+    var others = 
+`{{name}}, 
+I am writing today to ask that you join me in urging Chair Smith Warner to schedule SJR 10 as quickly as possible in the hopes that this important legislation can be passed this session. It is essential for SJR 10 to move quickly, as it still has a number of steps to get through the Legislative process before sine die.
+Additionally, we hope that you will consider signing onto SJR 10 as a co-sponsor, in order to amplify the message that Oregon is committed to being actively anti-racist. It is imperative that Oregon take proactive steps to ensure that slavery is truly a thing of the past.
+Thank you,
+-{{from}}`;
+
+    var recipients = [
+			['Representative Smith Warner', 'Rep.BarbaraSmithWarner@oregonlegislature.gov', smithWarner],
+			['Representative Fahey', 'Rep.JulieFahey@oregonlegislature.gov', fahey],
+      ['Representative Drazan', 'Rep.ChristineDrazan@oregonlegislature.gov', others],
+      ['Representative Holvey', 'Rep.PaulHolvey@oregonlegislature.gov', others],
+      ['Representative Bonham', 'Rep.DanielBonham@oregonlegislature.gov', others],
+      ['Representative Salinas', 'Rep.AndreaSalinas@oregonlegislature.gov', others],
+      ['Representative Zika', 'Rep.JackZika@oregonlegislature.gov', others],
+		];
+
+    init(`SJR 10: It's Time to End Slavery!`, recipients);
+	</script>
+</head>
+<body>
+	<h1><a href="./index.html">TellMyReps</a></h1>
+  <h2>SJR10</h2>
+	<p>We need to push to make slavery illegal in OR through SJR10. The gist of it is that within the next three weeks before sine die on June 27th, SJR 10 will need to pass out of House Rules, pass off the House floor, and return to the Senate floor for a concurrence vote. While this is a lot to squeeze into the next three weeks, we are hopeful that it is all possible! At this point, the next big hurdle is to get Chair Smith Warner to schedule the bill in House Rules.
+    If you can help, please send the emails (reworded  however you like or lefts as-is).</p>
+  <label>Your name</label>
+  <!-- Don't mess with this stuff, unless you just want to change the default "value" for from -->
+  <input type="text" id="from" value="A concerned citizen"/>
+	<div id="output"/>
+</body>
+</html>
