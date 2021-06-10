@@ -31,6 +31,9 @@ function buildLink(subject, from, recipient) {
   a.appendChild(document.createTextNode('Email '+recipient[0]));
   a.target = '_blank';
   a.style.display = 'block';
+  a.onclick = function(e) {
+    e.target.style.textDecoration = 'line-through';
+  }
   return a;
 }
 
