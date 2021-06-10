@@ -25,6 +25,7 @@ Thanks for your consideration,
 				var a = document.createElement('a');
 				a.href = 'mailto:'+recipients[i][1]+'?subject='+subject+'&body='+formatBody(recipients[i][0])
 				a.appendChild(document.createTextNode('Email '+recipients[i][0]));
+				a.target = '_blank';
 				a.style.display = 'block';
 				results.appendChild(a);
 			}
